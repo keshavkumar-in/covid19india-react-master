@@ -51,18 +51,48 @@ function Home(props) {
   return (
     <div className="Home">
       <div className="home-left">
-        {fetched && (
-          <React.Fragment>
-            <MapExplorer
-              states={states}
-              stateDistrictWiseData={stateDistrictWiseData}
-              regionHighlighted={regionHighlighted}
-            />
-          </React.Fragment>
-        )}
-      </div>
+        <div className="header fadeInUp" style={{animationDelay: '0.5s'}}>
+          <div className="header-mid">
+            <div className="titles">
+              <h1>Global COVID-19 Tracker</h1>
+              <h6 style={{fontWeight: 600}}>A Crowdsourced Initiative</h6>
+            </div>
+          </div>
+        </div>
+        <div className="global-stats">
+          <div className="stats">
+            <h5>Confirmed</h5>
+            <div className="stats-bottom">
+              <h2>1,8093850</h2>
+              <h6>{}</h6>
+            </div>
+          </div>
 
-      <div className="home-right">
+          <div className="stats is-blue">
+            <h5>Active</h5>
+            <div className="stats-bottom">
+              <h2>1,8093850</h2>
+              <h6>{}</h6>
+            </div>
+          </div>
+
+          <div className="stats is-green">
+            <h5>Recovered</h5>
+            <div className="stats-bottom">
+              <h2>1,8093850</h2>
+              <h6>{}</h6>
+            </div>
+          </div>
+
+          <div className="stats is-gray">
+            <h5>Deceased</h5>
+            <div className="stats-bottom">
+              <h2>1,8093850</h2>
+              <h6>{}</h6>
+            </div>
+          </div>
+        </div>
+
         <div className="header fadeInUp" style={{animationDelay: '0.5s'}}>
           <div className="header-mid">
             <div className="titles">
@@ -98,6 +128,24 @@ function Home(props) {
           onHighlightState={onHighlightState}
           onHighlightDistrict={onHighlightDistrict}
         />
+      </div>
+
+      <div className="home-right">
+        {fetched && (
+          <React.Fragment>
+            <MapExplorer
+              states={states}
+              stateDistrictWiseData={stateDistrictWiseData}
+              regionHighlighted={regionHighlighted}
+            />
+          </React.Fragment>
+        )}
+        <iframe
+          id="hf-iframe"
+          src="https://covid19.infermedica.com/en?header=false"
+          height="100%"
+          style={{marginTop: '30px', border: 0}}
+        ></iframe>
       </div>
     </div>
   );

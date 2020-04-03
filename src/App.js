@@ -11,7 +11,6 @@ import './App.scss';
 import Home from './components/home';
 import Navbar from './components/navbar';
 import Links from './components/links';
-import Cluster from './components/cluster';
 import FAQ from './components/faq';
 import Banner from './components/banner';
 
@@ -24,12 +23,6 @@ function App() {
       view: Home,
       displayName: 'Home',
       animationDelayForNavbar: 0.2,
-    },
-    {
-      pageLink: '/precautions',
-      view: Cluster,
-      displayName: 'Precautions',
-      animationDelayForNavbar: 0.4,
     },
     {
       pageLink: '/symptomchecker',
