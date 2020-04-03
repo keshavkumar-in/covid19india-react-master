@@ -1,11 +1,12 @@
 {
   "emergency_numbers": [
     {
-      "number": "102"
+      "number": "102",
+      "description": "Ambulance"
     },
     {
       "number": "112",
-      "description": "(optional) Example"
+      "description": "National Emergency Number"
     }
   ],
   "covid_numbers": [
