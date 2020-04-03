@@ -67,7 +67,7 @@ function App() {
       <footer className="fadeInUp" style={{animationDelay: '2s'}}>
         <h5>We stand with everyone fighting on the frontlines</h5>
         <div className="link">
-          <a href="https://coronalivestatus.info">Covid-19 Live Status India</a>
+          <a href="https://coronalivestatus.info">Covid-19 India Live Status</a>
         </div>
       </footer>
     </div>
