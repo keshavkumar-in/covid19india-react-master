@@ -1,8 +1,8 @@
 {
-  "name": "covid19india",
+  "name": "coronalivestatus",
   "version": "1.0.0",
   "private": true,
-  "homepage": "http://covid19india.github.io/",
+  "homepage": "http://coronalivestatus.info/",
   "dependencies": {
     "axios": "^0.19.2",
     "d3": "^5.15.0",
