@@ -7,19 +7,19 @@ const images = [
   '/slider/slide_3.webp',
 ];
 
-const zoomOutProperties = {
+const zoomInProperties = {
   duration: 5000,
   transitionDuration: 500,
   infinite: true,
   indicators: true,
-  scale: 0.4,
+  scale: 1.5,
   arrows: true,
 };
 
 const Banner = () => {
   return (
     <div className="slide-container">
-      <Zoom {...zoomOutProperties}>
+      <Zoom {...zoomInProperties}>
         {images.map((each, index) => (
           <img
             key={index}
