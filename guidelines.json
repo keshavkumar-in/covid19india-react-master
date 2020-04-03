@@ -1,0 +1,27 @@
+{
+  "emergency_numbers": [
+    {
+      "number": "102"
+    },
+    {
+      "number": "112",
+      "description": "(optional) Example"
+    }
+  ],
+  "covid_numbers": [
+    {
+      "number": "+91-11-23978046"
+    },
+    {
+      "number": "+1075",
+      "description": "Toll Free"
+    }
+  ],
+  "websites": [
+    {
+      "website": "https://www.mohfw.gov.in/",
+      "description": "Ministry of Health and Family Welfare"
+    }
+  ],
+  "free_text": "Not sure what to do? Call: - +91-11-23978046"
+}

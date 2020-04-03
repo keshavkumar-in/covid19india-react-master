@@ -11,7 +11,7 @@ import './App.scss';
 import Home from './components/home';
 import Navbar from './components/navbar';
 import Links from './components/links';
-import FAQ from './components/faq';
+import SC from './components/sc';
 import Banner from './components/banner';
 
 const history = require('history').createBrowserHistory;
@@ -26,13 +26,13 @@ function App() {
     },
     {
       pageLink: '/symptomchecker',
-      view: Links,
+      view: SC,
       displayName: 'Symptom Checker',
       animationDelayForNavbar: 0.5,
     },
     {
       pageLink: '/links',
-      view: FAQ,
+      view: Links,
       displayName: 'Helpful Links',
       animationDelayForNavbar: 0.6,
     },

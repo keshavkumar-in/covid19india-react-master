@@ -143,8 +143,8 @@ function Home(props) {
         <iframe
           id="hf-iframe"
           src="https://covid19.infermedica.com/en?header=false"
-          height="100%"
-          style={{marginTop: '30px', border: 0}}
+          style={{marginTop: '30px', border: 0, height: '100vh'}}
+          title="COVID-19 Symptom Checker"
         ></iframe>
       </div>
     </div>
