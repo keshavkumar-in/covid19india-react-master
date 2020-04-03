@@ -167,7 +167,6 @@ body {
   margin: 0;
   -webkit-tap-highlight-color: transparent;
   -webkit-touch-callout: none;
-  background-color: $dark;
 }
 
 h1 {
@@ -284,13 +283,14 @@ h6 {
   .navbar-right {
     margin-left: 2rem;
     align-self: center;
+
     a {
       display: inline-block;
       font-size: 14px;
       font-family: 'Archia';
       text-decoration: none;
       margin-right: 2rem;
-      color: $white;
+      color: $gray-dark;
 
       span {
         display: inline-block;
@@ -304,9 +304,7 @@ h6 {
   }
 
   .focused {
-    color: $dark;
-    background-color: $white;
-    padding: 15px;
+    color: $gray;
   }
 
   img {
