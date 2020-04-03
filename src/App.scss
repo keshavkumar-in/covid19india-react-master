@@ -168,7 +168,26 @@ body {
   -webkit-tap-highlight-color: transparent;
   -webkit-touch-callout: none;
 }
-
+.tags {
+  ul {
+    list-style: none;
+    li {
+      float: left;
+      margin: 5px;
+      font-family: 'Archia';
+      background-color: $orange-light;
+      padding: 10px;
+      border-radius: 50px;
+      cursor: pointer;
+    }
+    li:nth-child(even) {
+      background-color: $blue-light;
+    }
+    li:nth-child(odd) {
+      background-color: $green-light;
+    }
+  }
+}
 h1 {
   font-family: 'archia';
   font-size: 24px !important;
