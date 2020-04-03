@@ -445,44 +445,6 @@ h6 {
   }
 }
 
-.telegram {
-  width: 15.5rem;
-  background: $gray-light !important;
-  color: #08c !important;
-  padding-left: 0.65rem;
-  justify-content: center;
-
-  &:hover {
-    background: $gray-hover !important;
-  }
-}
-
-.github {
-  width: 15.5rem;
-  background: #000 !important;
-  color: #fff !important;
-  padding-left: 0.65rem;
-  justify-content: center;
-  transition: all 0.2s ease-in-out;
-
-  &:hover {
-    background: $gray-dark !important;
-  }
-}
-
-.twitter {
-  width: 15.5rem;
-}
-
-.excel {
-  color: #33a667;
-  background: #33a66730;
-
-  &:hover {
-    background: #33a66750;
-  }
-}
-
 .Level {
   display: flex;
   flex-direction: row;
@@ -1411,7 +1373,7 @@ table {
 }
 
 .link {
-  width: 30rem;
+  width: 40rem;
   margin-top: 1rem;
   margin-bottom: 1rem;
   align-self: center;

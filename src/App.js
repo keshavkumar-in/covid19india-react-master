@@ -108,6 +108,32 @@ function App() {
             <li>corona current situation</li>
             <li>corona infected</li>
             <li>virus 2019</li>
+            <li>how may peoples are infected by corona</li>
+            <li>what is the meaning of lockdown</li>
+            <li>what is the meaning of Quarantine</li>
+            <li>corona latest news</li>
+            <li>latest news on corona</li>
+            <li>coronavirus latest news</li>
+            <li>corona virus latest report</li>
+            <li>coronavirus latest report</li>
+            <li>China virus</li>
+            <li>myth related to coronavirus</li>
+            <li>myth and truth of coronavirus</li>
+            <li>global report on coronavirus</li>
+            <li>latest report on coronavirus</li>
+            <li>coronavirus news</li>
+            <li>corona virus news</li>
+            <li>latest report on corona virus</li>
+            <li>latest corona news</li>
+            <li>latest coronavirus news</li>
+            <li>myth behind corona virus</li>
+            <li>myth behind coronvirus</li>
+            <li>corona in india</li>
+            <li>infected people in india due to coronavirus</li>
+            <li>infected people in india</li>
+            <li>infected people in india due to covid19</li>
+            <li>infected people in india due to corona virus</li>
+            <li>infected people in india due to COVID19</li>
           </ul>
         </div>
       </footer>
