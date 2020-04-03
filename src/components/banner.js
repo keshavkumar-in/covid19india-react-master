@@ -1,46 +1,35 @@
-import React, {useState, useEffect, useCallback} from 'react';
-import axios from 'axios';
+import React from 'react';
+import {Zoom} from 'react-slideshow-image';
 
-function Banner(props) {
-  const [snippets, setSnippets] = useState([]);
-  const [snippet, setSnippet] = useState();
+const images = [
+  '/slider/slide_1.webp',
+  '/slider/slide_2.webp',
+  '/slider/slide_3.webp',
+];
 
-  useEffect(() => {
-    axios
-      .get('https://api.covid19india.org/website_data.json')
-      .then((response) => {
-        setSnippets(response.data.factoids || []);
-        setSnippet(response.data.factoids[0] || '');
-      })
-      .catch((err) => {
-        console.log(err);
-      });
-  }, []);
+const zoomOutProperties = {
+  duration: 5000,
+  transitionDuration: 500,
+  infinite: true,
+  indicators: true,
+  scale: 0.4,
+  arrows: true,
+};
 
-  const snippetChooser = useCallback(
-    (min, max) => {
-      const index = Math.random() * (max - min) + min;
-      setSnippet(snippets[Math.floor(index)]);
-    },
-    [snippets]
-  );
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      snippetChooser(0, snippets.length - 1);
-    }, 10000);
-    return () => clearInterval(interval);
-  }, [snippetChooser, snippets]);
-
+const Banner = () => {
   return (
-    <div
-      onClick={() => snippetChooser(0, snippets.length - 1)}
-      className="Banner fadeInUp"
-      style={{animationDelay: '0.2s'}}
-    >
-      <div className="snippet">{snippet ? snippet.banner : ''}</div>
+    <div className="slide-container">
+      <Zoom {...zoomOutProperties}>
+        {images.map((each, index) => (
+          <img
+            key={index}
+            style={{width: '100%'}}
+            src={each}
+            alt="COVID-19 Symptoms, Precaution, Myths & Truths"
+          />
+        ))}
+      </Zoom>
     </div>
   );
-}
-
+};
 export default Banner;
