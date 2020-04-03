@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset
+      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+
+
+<url>
+  <loc>https://coronalivestatus.info/</loc>
+  <lastmod>2020-04-03T18:57:28+00:00</lastmod>
+</url>
+<url>
+  <loc>https://coronalivestatus.info/symptomchecker</loc>
+  <lastmod>2020-04-03T18:57:28+00:00</lastmod>
+</url>
+<url>
+  <loc>https://coronalivestatus.info/links</loc>
+  <lastmod>2020-04-03T18:57:28+00:00</lastmod>
+</url>
+</urlset>
