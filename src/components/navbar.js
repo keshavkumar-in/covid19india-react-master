@@ -22,17 +22,19 @@ function Navbar(props) {
       >
         <img
           className="fadeInUp logo"
-          alt="India COVID-19 Tracker"
+          alt="India COVID-19 Live Status"
           src="/icon.png"
           style={{
             animationDelay: '0.0s',
-            width: window.location.pathname === '/clusters' ? '1.5rem' : '',
-            height: window.location.pathname === '/clusters' ? '1.5rem' : '',
+            width: '150px',
+            height: '60px',
             transition: 'all 0.3s ease-in-out',
           }}
         />
 
-        <div className="navbar-left">
+        <div className="navbar-left"></div>
+
+        <div className="navbar-right">
           {props.pages.map((page, i) => {
             return (
               <Link to={page.pageLink} key={i}>
@@ -45,8 +47,6 @@ function Navbar(props) {
             );
           })}
         </div>
-
-        <div className="navbar-right"></div>
       </div>
     );
   } else {
