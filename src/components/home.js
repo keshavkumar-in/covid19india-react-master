@@ -52,41 +52,43 @@ function Home(props) {
     <div className="Home">
       <div className="home-left">
         <GlobalData />
-        <div className="header fadeInUp" style={{animationDelay: '0.5s'}}>
-          <div className="header-mid">
-            <div className="titles">
-              <h1>India COVID-19 Tracker</h1>
-              <h6 style={{fontWeight: 600}}>A Crowdsourced Initiative</h6>
-            </div>
-            <div className="last-update">
-              <h6>Last Updated</h6>
-              <h6 style={{color: '#28a745', fontWeight: 600}}>
-                {isNaN(Date.parse(formatDate(lastUpdated)))
-                  ? ''
-                  : formatDistance(
-                      new Date(formatDate(lastUpdated)),
-                      new Date()
-                    ) + ' Ago'}
-              </h6>
-              <h6 style={{color: '#28a745', fontWeight: 600}}>
-                {isNaN(Date.parse(formatDate(lastUpdated)))
-                  ? ''
-                  : formatDateAbsolute(lastUpdated)}
-              </h6>
+        <div className="neutable">
+          <div className="header fadeInUp" style={{animationDelay: '0.5s'}}>
+            <div className="header-mid">
+              <div className="titles">
+                <h1>India COVID-19 Tracker</h1>
+                <h6 style={{fontWeight: 600}}>A Crowdsourced Initiative</h6>
+              </div>
+              <div className="last-update">
+                <h6>Last Updated</h6>
+                <h6 style={{color: '#28a745', fontWeight: 600}}>
+                  {isNaN(Date.parse(formatDate(lastUpdated)))
+                    ? ''
+                    : formatDistance(
+                        new Date(formatDate(lastUpdated)),
+                        new Date()
+                      ) + ' Ago'}
+                </h6>
+                <h6 style={{color: '#28a745', fontWeight: 600}}>
+                  {isNaN(Date.parse(formatDate(lastUpdated)))
+                    ? ''
+                    : formatDateAbsolute(lastUpdated)}
+                </h6>
+              </div>
             </div>
           </div>
+
+          <Level data={states} deltas={deltas} />
+          <Minigraph timeseries={timeseries} animate={true} />
+
+          <Table
+            states={states}
+            summary={false}
+            stateDistrictWiseData={stateDistrictWiseData}
+            onHighlightState={onHighlightState}
+            onHighlightDistrict={onHighlightDistrict}
+          />
         </div>
-
-        <Level data={states} deltas={deltas} />
-        <Minigraph timeseries={timeseries} animate={true} />
-
-        <Table
-          states={states}
-          summary={false}
-          stateDistrictWiseData={stateDistrictWiseData}
-          onHighlightState={onHighlightState}
-          onHighlightDistrict={onHighlightDistrict}
-        />
       </div>
 
       <div className="home-right">
@@ -99,7 +101,7 @@ function Home(props) {
             />
           </React.Fragment>
         )}
-        <div className="fadeInUp" style={{animationDelay: '0.5s'}}>
+        <div className="neuchecker fadeInUp" style={{animationDelay: '0.5s'}}>
           <h1 style={{marginLeft: '20px'}}>COVID-19 Symptom Checker</h1>
           <iframe
             id="hf-iframe"

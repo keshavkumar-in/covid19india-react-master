@@ -353,7 +353,10 @@ export default function ({states, stateDistrictWiseData, regionHighlighted}) {
   const {name, lastupdatedtime} = currentHoveredRegion;
 
   return (
-    <div className="MapExplorer fadeInUp" style={{animationDelay: '0.2s'}}>
+    <div
+      className="neumap MapExplorer fadeInUp"
+      style={{animationDelay: '0.2s'}}
+    >
       <div className="header">
         <h1>{currentMap.name} Map</h1>
         <h6>
@@ -452,7 +455,6 @@ export default function ({states, stateDistrictWiseData, regionHighlighted}) {
           </div>
         ) : null}
       </div>
-
       <ChoroplethMap
         statistic={statistic}
         mapMeta={currentMap}

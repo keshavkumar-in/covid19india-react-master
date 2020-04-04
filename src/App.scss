@@ -167,6 +167,7 @@ body {
   margin: 0;
   -webkit-tap-highlight-color: transparent;
   -webkit-touch-callout: none;
+  background-color: $dark;
 }
 .tags {
   ul {
@@ -179,9 +180,10 @@ body {
       padding: 10px;
       border-radius: 50px;
       cursor: pointer;
+      color: $teal;
     }
     li:nth-child(even) {
-      background-color: $blue-light;
+      background-color: $orange-light;
     }
     li:nth-child(odd) {
       background-color: $green-light;
@@ -193,6 +195,7 @@ h1 {
   font-size: 24px !important;
   font-weight: 900;
   text-transform: uppercase;
+  color: $teal;
 }
 
 h2 {
@@ -256,7 +259,7 @@ h6 {
   .home-right {
     display: flex;
     flex-direction: column;
-    width: 30rem;
+    width: 35rem;
   }
 
   .home-left {
@@ -266,6 +269,26 @@ h6 {
   .home-right {
     margin-left: 2.5rem;
   }
+}
+
+.neuglobal,
+.neutable,
+.neuchecker,
+.neumap {
+  border-radius: 30px;
+  margin-bottom: 15px;
+  transition: 0.5s;
+  padding: 18px;
+  box-shadow: 3px 3px 10px 2px rgba(0, 0, 0, 0.2),
+    -3px -3px 10px 2px rgba(0, 0, 0, 0.3);
+}
+
+.neuglobal:hover,
+.neutable:hover,
+.neuchecker:hover,
+.neumap:hover {
+  box-shadow: inset 3px 3px 10px 2px rgba(0, 0, 0, 0.1),
+    inset -3px -3px 10px 2px rgba(0, 0, 0, 0.3);
 }
 
 .Banner {
@@ -307,7 +330,7 @@ h6 {
       font-family: 'Archia';
       text-decoration: none;
       margin-right: 2rem;
-      color: $gray-dark;
+      color: $white;
 
       span {
         display: inline-block;
@@ -348,7 +371,7 @@ h6 {
   }
 
   h1 {
-    color: $gray-dark;
+    color: $teal;
   }
 
   .header-mid {
@@ -359,7 +382,7 @@ h6 {
     .titles {
       h6 {
         margin-top: 0.25rem;
-        color: $gray;
+        color: $teal;
       }
     }
 
@@ -517,12 +540,12 @@ h6 {
 
   .is-gray {
     h1 {
-      color: $gray;
+      color: $white;
     }
 
     h4,
     h5 {
-      color: $gray-mid;
+      color: $white;
     }
   }
 }
@@ -543,21 +566,23 @@ abbr {
   }
 
   &.is-gray {
-    color: $gray;
+    color: $white;
   }
 }
 
 .table-fineprint {
   text-align: right;
   margin: 0 0 0 0;
-  color: $gray-mid;
+  color: $teal;
   margin-bottom: 0.25rem;
   margin-right: 0.25rem;
+
   a {
     text-decoration: none;
-    color: inherit;
+    color: $cherry;
     border-bottom: 2px solid $gray-hover;
     transition: all 0.2s ease-in-out;
+
     &:hover {
       background: $gray-hover;
     }
@@ -579,7 +604,7 @@ table {
 
   thead {
     background: $gray-light;
-    color: $gray-dark;
+    color: $blue;
     text-align: left;
     font-size: 0.75rem;
 
@@ -618,14 +643,14 @@ table {
           stroke-width: 4px;
           margin-top: 0.15rem;
           margin-left: 0.25rem;
-          color: $gray-mid;
+          color: $blue;
         }
       }
     }
   }
 
   tbody {
-    color: $gray;
+    color: $teal;
 
     tr {
       transition: background 0.1s ease-in-out;
@@ -691,12 +716,11 @@ table {
     .district-heading {
       transform: translateX(1rem);
       background: $gray-light;
-
       td {
         font-size: 0.75rem;
         font-weight: 900;
         padding: 0.45rem;
-        color: $gray-dark;
+        color: $white;
         background: $gray-light;
 
         .heading-content {
@@ -735,7 +759,7 @@ table {
     position: absolute;
     margin: 0;
     top: -1rem;
-    color: $gray-mid;
+    color: $teal;
     right: 0;
   }
 
@@ -791,12 +815,11 @@ table {
   display: flex;
   flex-direction: column;
   align-self: center;
-  width: 30rem;
-
+  width: 32.5rem;
   .header {
     display: flex;
     flex-direction: column;
-    color: $gray;
+    color: $teal;
     margin-bottom: 2.5rem;
     align-self: flex-start;
     h1 {
@@ -827,6 +850,7 @@ table {
   .back-button {
     position: absolute;
     right: 0;
+    margin-right: 15px;
     background: $orange-light;
     color: $orange;
     transition: all 0.2s ease-in-out;
@@ -882,7 +906,7 @@ table {
     }
 
     h3 {
-      color: $gray-mid;
+      color: $teal;
       font-weight: 900;
     }
 
@@ -910,6 +934,7 @@ table {
 
       h1 {
         font-weight: 600;
+        color: $cherry;
       }
 
       &.is-green {
@@ -940,11 +965,11 @@ table {
         background: $gray-light;
         h5,
         h6 {
-          color: $gray-mid;
+          color: $white;
         }
 
         h1 {
-          color: $gray;
+          color: $white;
         }
       }
 
@@ -997,7 +1022,7 @@ table {
     border-radius: 5px;
     display: flex;
     flex-direction: column;
-    margin-left: 0.25rem;
+    margin-left: 0.2rem;
     margin-right: 0.25rem;
     margin-bottom: 0.5rem;
     width: 100%;
@@ -1012,8 +1037,9 @@ table {
       }
     }
 
-    h2 {
+    h3 {
       font-weight: 600;
+      color: $cherry;
     }
 
     &.is-green {
@@ -1023,7 +1049,7 @@ table {
         color: $green-mid;
       }
 
-      h2 {
+      h3 {
         color: $green;
       }
     }
@@ -1035,7 +1061,7 @@ table {
         color: $blue-mid;
       }
 
-      h2 {
+      h3 {
         color: $blue;
       }
     }
@@ -1044,11 +1070,11 @@ table {
       background: $gray-light;
       h5,
       h6 {
-        color: $gray-mid;
+        color: $white;
       }
 
-      h2 {
-        color: $gray;
+      h3 {
+        color: $white;
       }
     }
 
@@ -1415,7 +1441,7 @@ table {
 
   h3 {
     margin-bottom: 0;
-    color: $gray-dark;
+    color: $teal;
     font-weight: 900;
   }
 }
@@ -1842,7 +1868,25 @@ footer {
       margin: 0;
     }
   }
+  .neuglobal,
+  .neutable,
+  .neuchecker,
+  .neumap {
+    border-radius: 30px;
+    margin-bottom: 15px;
+    transition: 0.5s;
+    padding: 18px;
+    box-shadow: 3px 3px 10px 2px rgba(0, 0, 0, 0.2),
+      -3px -3px 10px 2px rgba(0, 0, 0, 0.3);
+  }
 
+  .neuglobal:hover,
+  .neutable:hover,
+  .neuchecker:hover,
+  .neumap:hover {
+    box-shadow: inset 3px 3px 10px 2px rgba(0, 0, 0, 0.1),
+      inset -3px -3px 10px 2px rgba(0, 0, 0, 0.3);
+  }
   .link {
     width: calc(100% - 1rem);
   }
