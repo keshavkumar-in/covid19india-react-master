@@ -1,7 +1,7 @@
 import React, {useState, useEffect, useMemo, useCallback} from 'react';
 import ChoroplethMap from './choropleth';
 import {MAP_TYPES, MAPS_DIR} from '../constants';
-import {formatDate} from '../utils/common-functions';
+import {formatDate, formatDateAbsolute} from '../utils/common-functions';
 import {formatDistance} from 'date-fns';
 
 const mapMeta = {
@@ -354,15 +354,15 @@ export default function ({states, stateDistrictWiseData, regionHighlighted}) {
 
   return (
     <div
-      className="neumap MapExplorer fadeInUp"
-      style={{animationDelay: '0.2s'}}
+      className="MapExplorer neumap fadeInUp"
+      style={{animationDelay: '1.2s'}}
     >
       <div className="header">
-        <h1>{currentMap.name} Map</h1>
+        <h1>{currentMap.name}</h1>
         <h6>
           {window.innerWidth <= 769 ? 'Tap' : 'Hover'} over a{' '}
-          {currentMap.mapType === MAP_TYPES.COUNTRY ? 'state' : 'district'} for
-          more details
+          {currentMap.mapType === MAP_TYPES.COUNTRY ? 'state/ut' : 'district'}{' '}
+          for more details
         </h6>
         {window.innerWidth <= 769 && (
           <h6 style={{marginTop: '1rem'}}>
@@ -428,7 +428,13 @@ export default function ({states, stateDistrictWiseData, regionHighlighted}) {
             }`}
           >
             <h6>Last Updated</h6>
-            <h3>
+            <h3
+              title={
+                isNaN(Date.parse(formatDate(lastupdatedtime)))
+                  ? ''
+                  : formatDateAbsolute(lastupdatedtime)
+              }
+            >
               {isNaN(Date.parse(formatDate(lastupdatedtime)))
                 ? ''
                 : formatDistance(
@@ -455,6 +461,7 @@ export default function ({states, stateDistrictWiseData, regionHighlighted}) {
           </div>
         ) : null}
       </div>
+
       <ChoroplethMap
         statistic={statistic}
         mapMeta={currentMap}

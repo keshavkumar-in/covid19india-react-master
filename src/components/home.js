@@ -1,19 +1,28 @@
 import React, {useState, useEffect} from 'react';
 import axios from 'axios';
 import {formatDistance} from 'date-fns';
-import {formatDate, formatDateAbsolute} from '../utils/common-functions';
+import {
+  formatDate,
+  formatDateAbsolute,
+  validateCTS,
+} from '../utils/common-functions';
+
 import Table from './table';
 import Level from './level';
 import MapExplorer from './mapexplorer';
 import Minigraph from './minigraph';
 import GlobalData from './global';
+
 function Home(props) {
   const [states, setStates] = useState([]);
   const [stateDistrictWiseData, setStateDistrictWiseData] = useState({});
+  /* const [patients, setPatients] = useState([]);*/
   const [fetched, setFetched] = useState(false);
+  const [graphOption, setGraphOption] = useState(1);
   const [lastUpdated, setLastUpdated] = useState('');
   const [timeseries, setTimeseries] = useState([]);
-  const [deltas, setDeltas] = useState([]);
+  const [timeseriesMode, setTimeseriesMode] = useState(true);
+  const [timeseriesLogMode, setTimeseriesLogMode] = useState(false);
   const [regionHighlighted, setRegionHighlighted] = useState(undefined);
 
   useEffect(() => {
@@ -29,9 +38,8 @@ function Home(props) {
         axios.get('https://api.covid19india.org/state_district_wise.json'),
       ]);
       setStates(response.data.statewise);
-      setTimeseries(response.data.cases_time_series);
+      setTimeseries(validateCTS(response.data.cases_time_series));
       setLastUpdated(response.data.statewise[0].lastupdatedtime);
-      setDeltas(response.data.key_values[0]);
       setStateDistrictWiseData(stateDistrictWiseResponse.data);
       setFetched(true);
     } catch (err) {
@@ -78,7 +86,7 @@ function Home(props) {
             </div>
           </div>
 
-          <Level data={states} deltas={deltas} />
+          {states.length > 1 && <Level data={states} />}
           <Minigraph timeseries={timeseries} animate={true} />
 
           <Table
