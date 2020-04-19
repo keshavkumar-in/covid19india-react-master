@@ -11,18 +11,14 @@ import Table from './table';
 import Level from './level';
 import MapExplorer from './mapexplorer';
 import Minigraph from './minigraph';
-import GlobalData from './global';
 
 function Home(props) {
   const [states, setStates] = useState([]);
   const [stateDistrictWiseData, setStateDistrictWiseData] = useState({});
   /* const [patients, setPatients] = useState([]);*/
   const [fetched, setFetched] = useState(false);
-  const [graphOption, setGraphOption] = useState(1);
   const [lastUpdated, setLastUpdated] = useState('');
   const [timeseries, setTimeseries] = useState([]);
-  const [timeseriesMode, setTimeseriesMode] = useState(true);
-  const [timeseriesLogMode, setTimeseriesLogMode] = useState(false);
   const [regionHighlighted, setRegionHighlighted] = useState(undefined);
 
   useEffect(() => {
@@ -59,7 +55,6 @@ function Home(props) {
   return (
     <div className="Home">
       <div className="home-left">
-        <GlobalData />
         <div className="neutable">
           <div className="header fadeInUp" style={{animationDelay: '0.5s'}}>
             <div className="header-mid">
