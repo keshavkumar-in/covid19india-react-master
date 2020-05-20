@@ -45,6 +45,13 @@ function Navbar(props) {
               </Link>
             );
           })}
+          <a
+            href="https://blogbudz.com"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Blog
+          </a>
         </div>
       </div>
     );
